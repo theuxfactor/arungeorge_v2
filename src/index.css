@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+
+  /* Midnight & Violet Theme Palette */
+  --color-midnight-950: #020617;
+  --color-midnight-900: #0f172a;
+  --color-midnight-800: #1e293b;
+
+  --color-violet-500: #8b5cf6;
+  --color-violet-400: #a78bfa;
+  --color-cyan-400: #22d3ee;
+
+  --color-slate-50: #f8fafc;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+}
+
+:root {
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+
+  /* Dark Mode Only */
+  --bg-primary: var(--color-midnight-950);
+  --bg-secondary: var(--color-midnight-900);
+  --text-primary: var(--color-slate-50);
+  --text-secondary: var(--color-slate-300);
+  --accent-primary: var(--color-violet-400);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Glassmorphism Utilities */
+@layer utilities {
+  .glass-panel {
+    @apply backdrop-blur-md bg-white/5 border border-white/10;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  }
+}

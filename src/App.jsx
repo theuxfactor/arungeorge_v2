@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import DesignProcessModern from './components/DesignProcessModern';
 import ProjectModal from './components/ProjectModal';
 import articleRagImg from './assets/articles/article-rag.png';
-import codaThumbnail from './assets/coda-thumbnail.jpg';
+import codaThumbnail from './assets/coda-thumbnail.png';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);

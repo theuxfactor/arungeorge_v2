@@ -82,16 +82,16 @@ It operates on a "Zero-Friction" model: No login is required. Users simply type 
 
             <section id="hero" className="min-h-[80vh] flex flex-col justify-center items-start relative">
 
-              <h1 className="text-5xl md:text-8xl font-bold text-slate-900 dark:text-white mb-8 tracking-tighter leading-[1.1]">
+              <h1 className="text-5xl md:text-8xl font-bold text-white mb-8 tracking-tighter leading-[1.1]">
                 Orchestrating <br />
-                <span className="bg-gradient-to-r from-violet-600 via-indigo-500 to-cyan-400 bg-clip-text text-transparent pb-2 block">
+                <span className="bg-gradient-to-r from-violet-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent pb-2 block">
                   Intelligent Conversations
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-white max-w-2xl leading-relaxed font-light">
+              <p className="text-xl md:text-2xl text-slate-300 max-w-2xl leading-relaxed font-light">
                 A Full-Stack Conversation Designer who bridges the gap between concept and code. By leveraging AI-assisted development and deep UX principles, I craft and code intelligent agents that are not just conversational, but operationally effective.
                 <br /> <br />
-                My expertise is grounded in delivering enterprise-grade chat and voice applications for Fortune 100 clients at <a href="https://www.nuance.com" target="_blank" rel="noopener noreferrer" className="text-violet-600 dark:text-violet-400 hover:text-violet-500 dark:hover:text-violet-300 underline underline-offset-2 transition-colors">Nuance</a>, <a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer" className="text-violet-600 dark:text-violet-400 hover:text-violet-500 dark:hover:text-violet-300 underline underline-offset-2 transition-colors">Microsoft</a>, and <a href="https://www.hcltech.com" target="_blank" rel="noopener noreferrer" className="text-violet-600 dark:text-violet-400 hover:text-violet-500 dark:hover:text-violet-300 underline underline-offset-2 transition-colors">HCLTech</a>.
+                My expertise is grounded in delivering enterprise-grade chat and voice applications for Fortune 100 clients at <a href="https://www.nuance.com" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:text-violet-300 underline underline-offset-2 transition-colors">Nuance</a>, <a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:text-violet-300 underline underline-offset-2 transition-colors">Microsoft</a>, and <a href="https://www.hcltech.com" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:text-violet-300 underline underline-offset-2 transition-colors">HCLTech</a>.
               </p>
 
 
@@ -118,8 +118,8 @@ It operates on a "Zero-Friction" model: No login is required. Users simply type 
                     <div className="h-48 bg-gradient-to-br from-violet-500/10 to-cyan-400/10 rounded-xl mb-6 flex items-center justify-center group-hover:from-violet-500/20 group-hover:to-cyan-400/20 transition-colors">
                       <span className="text-violet-500/50 text-4xl font-light">Project Preview</span>
                     </div>
-                    <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3 group-hover:text-violet-400 transition-colors">{project.title}</h3>
-                    <p className="text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-3">{project.description}</p>
+                    <h3 className="text-2xl font-semibold text-white mb-3 group-hover:text-violet-400 transition-colors">{project.title}</h3>
+                    <p className="text-slate-400 leading-relaxed line-clamp-3">{project.description}</p>
                   </div>
                 ))}
               </div>

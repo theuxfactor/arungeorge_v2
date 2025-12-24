@@ -7,14 +7,14 @@ const SplashIntro = ({ onComplete }) => {
       animate={{ opacity: 0 }}
       transition={{ delay: 3.5, duration: 0.8 }}
       onAnimationComplete={onComplete}
-      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white dark:bg-[var(--color-midnight-950)] text-slate-900 dark:text-white"
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#020617] text-white"
     >
       <div className="text-center">
         <motion.h1
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-6xl md:text-8xl font-bold mb-4 tracking-tighter bg-gradient-to-r from-violet-600 to-indigo-600 dark:from-violet-400 dark:to-cyan-400 bg-clip-text text-transparent"
+          className="text-6xl md:text-8xl font-bold mb-4 tracking-tighter bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent"
         >
           Arun George
         </motion.h1>
@@ -28,7 +28,7 @@ const SplashIntro = ({ onComplete }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.6, duration: 0.8 }}
-          className="text-xl md:text-3xl font-light text-slate-600 dark:text-slate-300 tracking-wide"
+          className="text-xl md:text-3xl font-light text-slate-300 tracking-wide"
         >
           Full-Stack Conversation Designer + AI Architect
         </motion.p>

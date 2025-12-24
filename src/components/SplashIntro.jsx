@@ -30,7 +30,7 @@ const SplashIntro = ({ onComplete }) => {
           transition={{ delay: 1.6, duration: 0.8 }}
           className="text-xl md:text-3xl font-light text-slate-600 dark:text-slate-300 tracking-wide"
         >
-          AI Conversation Design Architect
+          Full-Stack Conversation Designer + AI Architect
         </motion.p>
       </div>
     </motion.div>

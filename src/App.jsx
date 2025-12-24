@@ -3,10 +3,66 @@ import { motion } from 'framer-motion';
 import SplashIntro from './components/SplashIntro';
 import Navbar from './components/Navbar';
 import DesignProcessModern from './components/DesignProcessModern';
+import ProjectModal from './components/ProjectModal';
 import articleRagImg from './assets/articles/article-rag.png';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const projects = [
+    {
+      id: 1,
+      title: "Coda",
+      tagline: "Your Music Connoisseur",
+      description: 'Coda is a desktop-native AI agent designed to solve "choice paralysis." Unlike standard streaming apps that trap users in algorithmic filter bubbles, Coda uses a Multi-Agent Architecture to actively hunt for music based on context, mood, and activity (e.g., "Deep work," "Late night driving").',
+      detailedDescription: `Coda is a desktop-native AI agent designed to solve "choice paralysis." Unlike standard streaming apps that trap users in algorithmic filter bubbles, Coda uses a Multi-Agent Architecture to actively hunt for music based on context, mood, and activity (e.g., "Deep work," "Late night driving").
+
+It operates on a "Zero-Friction" model: No login is required. Users simply type a natural language request, and Coda delivers immediate, full-track playback (via YouTube) wrapped in a rich layer of cultural context.`,
+      architecture: [
+        {
+          name: "The Orchestrator",
+          role: "The Manager",
+          responsibility: "It is the only agent that speaks to the user. Its job is to maintain the \"Connoisseur\" persona, manage conversation memory, and enforce safety guardrails.",
+          keyFunction: "It parses raw user input (e.g., \"I need to focus\") and delegates tasks to the Analyst. It then synthesizes the final data into a conversational response."
+        },
+        {
+          name: "The Analyst",
+          role: "The Hunter",
+          responsibility: "It translates abstract \"vibes\" into hard data. It uses a lookup table to convert human feelings into API parameters (e.g., \"Sad Jazz\" → Valence < 0.3 + Minor Key).",
+          keyFunction: "It queries external databases (Last.fm/YouTube) to find the specific Track ID and Video URL that matches the request."
+        },
+        {
+          name: "The Storyteller",
+          role: "The Historian",
+          responsibility: "It ensures Coda isn't just a jukebox, but an expert. Once a track is found, the Storyteller scans metadata to find the \"Narrative Hook\"—trivia, sample history, or production details.",
+          keyFunction: "It returns a concise \"Why this matters\" fact (e.g., \"This track was the first to use the TR-808 drum machine\") which the Orchestrator presents to the user."
+        }
+      ],
+      userJourney: [
+        {
+          phase: "Input",
+          description: "User types \"I need a dark synthwave track for coding.\""
+        },
+        {
+          phase: "Orchestrate",
+          description: "The Orchestrator validates the intent and extracts keywords (genre: synthwave, mood: dark/focus)."
+        },
+        {
+          phase: "Analyze",
+          description: "The Analyst converts this to a query, hits the YouTube API, and retrieves a high-quality video ID."
+        },
+        {
+          phase: "Enrich",
+          description: "The Storyteller identifies that this artist is known for sci-fi soundtracks and passes that context along."
+        },
+        {
+          phase: "Output",
+          description: "Coda replies: \"I've queued up 'Nightcall'. It's a quintessential synthwave track synonymous with the 'Drive' aesthetic.\" -> Music Card appears and plays automatically."
+        }
+      ]
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-[var(--bg-primary)] transition-colors duration-300 overflow-x-hidden selection:bg-violet-500/30">
@@ -16,17 +72,15 @@ function App() {
         <>
           <Navbar />
 
-          {/* Ambient Background Glow */}
+          {/* Ambient Background Glow - Optimized */}
           <div className="fixed inset-0 pointer-events-none z-0">
-            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-violet-500/10 rounded-full blur-[120px] animate-pulse"></div>
-            <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-cyan-400/10 rounded-full blur-[120px] animate-pulse delay-1000"></div>
+            <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-violet-500/10 via-transparent to-transparent"></div>
+            <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-cyan-400/10 via-transparent to-transparent"></div>
           </div>
 
           <main className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12 space-y-32">
 
-            {/* Hero Section */}
             <section id="hero" className="min-h-[80vh] flex flex-col justify-center items-start relative">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-violet-500/20 to-transparent rounded-full blur-3xl -z-10 dark:opacity-40"></div>
 
               <h1 className="text-5xl md:text-8xl font-bold text-slate-900 dark:text-white mb-8 tracking-tighter leading-[1.1]">
                 Orchestrating <br />
@@ -35,37 +89,15 @@ function App() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed font-light">
-                I bridge the gap between human intent and artificial intelligence, crafting seamless, empathetic, and effective conversational experiences.
+                A Full-Stack Conversation Designer who bridges the gap between concept and code. By leveraging AI-assisted development and deep UX principles, I craft and code intelligent agents that are not just conversational, but operationally effective.
+                <br /> <br />
+                My expertise is grounded in delivering enterprise-grade chat and voice applications for Fortune 100 clients at <a href="https://www.nuance.com" target="_blank" rel="noopener noreferrer" className="text-violet-600 dark:text-violet-400 hover:text-violet-500 dark:hover:text-violet-300 underline underline-offset-2 transition-colors">Nuance</a>, <a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer" className="text-violet-600 dark:text-violet-400 hover:text-violet-500 dark:hover:text-violet-300 underline underline-offset-2 transition-colors">Microsoft</a>, and <a href="https://www.hcltech.com" target="_blank" rel="noopener noreferrer" className="text-violet-600 dark:text-violet-400 hover:text-violet-500 dark:hover:text-violet-300 underline underline-offset-2 transition-colors">HCLTech</a>.
               </p>
+
+
             </section>
 
-            {/* About Section */}
-            <section id="about" className="scroll-mt-32">
-              <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-4">
-                <span className="w-12 h-1 bg-violet-500 rounded-full"></span>
-                About Me
-              </h2>
-              <div className="glass-panel p-8 rounded-2xl md:p-12 space-y-6">
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-lg leading-relaxed text-slate-300"
-                >
-                  I'm currently exploring the shift from intent-based designs to contextually aware designs, along with researching Neural AI Interfaces such as Brain-Computer Interfaces (BCIs).
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  viewport={{ once: true }}
-                  className="text-lg leading-relaxed text-slate-300"
-                >
-                  I've worked with Fortune 100 companies to build AI-driven chatbots and voice apps @ <a href="https://www.nuance.com" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:text-violet-300 underline underline-offset-2">Nuance</a>, <a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:text-violet-300 underline underline-offset-2">Microsoft</a>, and <a href="https://www.hcltech.com" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:text-violet-300 underline underline-offset-2">HCLTech</a>.
-                </motion.p>
-              </div>
-            </section>
+
 
             {/* Design Process Section */}
             <DesignProcessModern />
@@ -77,13 +109,17 @@ function App() {
                 Selected Work
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {[1, 2, 3, 4].map((item) => (
-                  <div key={item} className="glass-panel rounded-2xl p-8 hover:border-violet-500/50 transition-all duration-300 group cursor-pointer hover:-translate-y-1">
+                {projects.map((project) => (
+                  <div
+                    key={project.id}
+                    onClick={() => setSelectedProject(project)}
+                    className="glass-panel rounded-2xl p-8 hover:border-violet-500/50 transition-all duration-300 group cursor-pointer hover:-translate-y-1"
+                  >
                     <div className="h-48 bg-gradient-to-br from-violet-500/10 to-cyan-400/10 rounded-xl mb-6 flex items-center justify-center group-hover:from-violet-500/20 group-hover:to-cyan-400/20 transition-colors">
                       <span className="text-violet-500/50 text-4xl font-light">Project Preview</span>
                     </div>
-                    <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3 group-hover:text-violet-400 transition-colors">Project {item}</h3>
-                    <p className="text-slate-500 dark:text-slate-400 leading-relaxed">Brief description of the project and the conversational challenges solved. Highlighting the impact and design thinking.</p>
+                    <h3 className="text-2xl font-semibold text-slate-900 dark:text-white mb-3 group-hover:text-violet-400 transition-colors">{project.title}</h3>
+                    <p className="text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-3">{project.description}</p>
                   </div>
                 ))}
               </div>
@@ -112,6 +148,12 @@ function App() {
             </section>
 
           </main>
+
+          <ProjectModal
+            project={selectedProject}
+            isOpen={!!selectedProject}
+            onClose={() => setSelectedProject(null)}
+          />
         </>
       )}
     </div>

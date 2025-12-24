@@ -48,7 +48,7 @@ body {
 /* Glassmorphism Utilities */
 @layer utilities {
   .glass-panel {
-    @apply backdrop-blur-md bg-white/5 border border-white/10;
+    @apply bg-slate-900/80 border border-white/10;
   }
 
   .text-glow {

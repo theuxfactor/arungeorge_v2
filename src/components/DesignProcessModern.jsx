@@ -66,7 +66,7 @@ const DesignProcessModern = () => {
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1, delay: 0.2 }}
-                        className="absolute w-[650px] h-[650px] rounded-full border border-dashed border-slate-700/50 animate-spin-slow"
+                        className="absolute w-[650px] h-[650px] rounded-full border border-dashed border-slate-700/50"
                     ></motion.div>
                 </div>
 
@@ -75,7 +75,7 @@ const DesignProcessModern = () => {
                     initial={{ scale: 0, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.8 }}
-                    className="absolute z-10 w-48 h-48 rounded-full bg-[#020617] border border-violet-500/20 shadow-[0_0_100px_rgba(139,92,246,0.15)] flex flex-col items-center justify-center text-center p-4 backdrop-blur-xl"
+                    className="absolute z-10 w-48 h-48 rounded-full bg-[#020617] border border-violet-500/20 shadow-[0_0_100px_rgba(139,92,246,0.15)] flex flex-col items-center justify-center text-center p-4"
                 >
                     <span className="text-4xl mb-2">⚡</span>
                     <h3 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-cyan-400">AGENTS</h3>
@@ -99,7 +99,7 @@ const DesignProcessModern = () => {
                                 bg-[#020617]/90
                             `}>
                                 {/* Background Gradient */}
-                                <div className={`absolute -right-4 -top-4 w-24 h-24 bg-gradient-to-br ${step.color} opacity-20 blur-2xl group-hover:opacity-30 transition-opacity`}></div>
+                                <div className={`absolute -right-4 -top-4 w-24 h-24 bg-gradient-to-br ${step.color} opacity-10 rounded-full group-hover:opacity-20 transition-opacity`}></div>
 
                                 <div className="relative z-10 text-center">
                                     <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-2xl mb-4 mx-auto group-hover:bg-white/20 transition-colors">
@@ -138,7 +138,7 @@ const DesignProcessModern = () => {
                                 border-t-4 border-t-transparent hover:border-t-violet-400
                             `}>
                             {/* Background Gradient */}
-                            <div className={`absolute -right-4 -top-4 w-24 h-24 bg-gradient-to-br ${step.color} opacity-20 blur-2xl group-hover:opacity-30 transition-opacity`}></div>
+                            <div className={`absolute -right-4 -top-4 w-24 h-24 bg-gradient-to-br ${step.color} opacity-10 rounded-full group-hover:opacity-20 transition-opacity`}></div>
 
                             <div className="relative z-10">
                                 <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:bg-white/20 transition-colors">

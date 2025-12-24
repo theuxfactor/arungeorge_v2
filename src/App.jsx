@@ -104,8 +104,8 @@ It operates on a "Zero-Friction" model: No login is required. Users simply type 
 
             {/* Projects Section */}
             <section id="projects" className="scroll-mt-32">
-              <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-4">
-                <span className="w-12 h-1 bg-cyan-400 rounded-full"></span>
+              <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-4">
+                <span className="w-12 h-1 bg-violet-500 rounded-full"></span>
                 Selected Work
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import DesignProcessModern from './components/DesignProcessModern';
 import ProjectModal from './components/ProjectModal';
 import articleRagImg from './assets/articles/article-rag.png';
+import codaThumbnail from './assets/coda-thumbnail.jpg';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -15,6 +16,7 @@ function App() {
       id: 1,
       title: "Coda",
       tagline: "Your Music Connoisseur",
+      thumbnail: codaThumbnail,
       description: 'Coda is a desktop-native AI agent designed to solve "choice paralysis." Unlike standard streaming apps that trap users in algorithmic filter bubbles, Coda uses a Multi-Agent Architecture to actively hunt for music based on context, mood, and activity (e.g., "Deep work," "Late night driving").',
       detailedDescription: `Coda is a desktop-native AI agent designed to solve "choice paralysis." Unlike standard streaming apps that trap users in algorithmic filter bubbles, Coda uses a Multi-Agent Architecture to actively hunt for music based on context, mood, and activity (e.g., "Deep work," "Late night driving").
 
@@ -115,9 +117,15 @@ It operates on a "Zero-Friction" model: No login is required. Users simply type 
                     onClick={() => setSelectedProject(project)}
                     className="glass-panel rounded-2xl p-8 hover:border-violet-500/50 transition-all duration-300 group cursor-pointer hover:-translate-y-1"
                   >
-                    <div className="h-48 bg-gradient-to-br from-violet-500/10 to-cyan-400/10 rounded-xl mb-6 flex items-center justify-center group-hover:from-violet-500/20 group-hover:to-cyan-400/20 transition-colors">
-                      <span className="text-violet-500/50 text-4xl font-light">Project Preview</span>
-                    </div>
+                    {project.thumbnail ? (
+                      <div className="h-48 rounded-xl mb-6 overflow-hidden">
+                        <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                      </div>
+                    ) : (
+                      <div className="h-48 bg-gradient-to-br from-violet-500/10 to-cyan-400/10 rounded-xl mb-6 flex items-center justify-center group-hover:from-violet-500/20 group-hover:to-cyan-400/20 transition-colors">
+                        <span className="text-violet-500/50 text-4xl font-light">Project Preview</span>
+                      </div>
+                    )}
                     <h3 className="text-2xl font-semibold text-white mb-3 group-hover:text-violet-400 transition-colors">{project.title}</h3>
                     <p className="text-slate-400 leading-relaxed line-clamp-3">{project.description}</p>
                   </div>

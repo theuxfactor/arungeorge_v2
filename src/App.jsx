@@ -88,7 +88,7 @@ It operates on a "Zero-Friction" model: No login is required. Users simply type 
                   Intelligent Conversations
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed font-light">
+              <p className="text-xl md:text-2xl text-white max-w-2xl leading-relaxed font-light">
                 A Full-Stack Conversation Designer who bridges the gap between concept and code. By leveraging AI-assisted development and deep UX principles, I craft and code intelligent agents that are not just conversational, but operationally effective.
                 <br /> <br />
                 My expertise is grounded in delivering enterprise-grade chat and voice applications for Fortune 100 clients at <a href="https://www.nuance.com" target="_blank" rel="noopener noreferrer" className="text-violet-600 dark:text-violet-400 hover:text-violet-500 dark:hover:text-violet-300 underline underline-offset-2 transition-colors">Nuance</a>, <a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer" className="text-violet-600 dark:text-violet-400 hover:text-violet-500 dark:hover:text-violet-300 underline underline-offset-2 transition-colors">Microsoft</a>, and <a href="https://www.hcltech.com" target="_blank" rel="noopener noreferrer" className="text-violet-600 dark:text-violet-400 hover:text-violet-500 dark:hover:text-violet-300 underline underline-offset-2 transition-colors">HCLTech</a>.

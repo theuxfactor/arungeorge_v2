@@ -77,7 +77,7 @@ const Resume = () => {
         <section id="resume" className="scroll-mt-32 mb-32 relative">
             <h2 className="text-3xl font-bold text-white mb-16 flex items-center gap-4">
                 <span className="w-12 h-1 bg-violet-500 rounded-full"></span>
-                Resume
+                Résumé
             </h2>
 
             <div className="relative max-w-4xl mx-auto">

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const menuItems = ['Process', 'Resume', 'Projects', 'Articles'];
+    const menuItems = ['Process', 'Résumé', 'Projects', 'Articles'];
 
     const handleLinkClick = () => {
         setIsOpen(false);
@@ -29,7 +29,7 @@ const Navbar = () => {
                             {menuItems.map((item) => (
                                 <a
                                     key={item}
-                                    href={`#${item.toLowerCase()}`}
+                                    href={`#${item === 'Résumé' ? 'resume' : item.toLowerCase()}`}
                                     className="text-slate-300 hover:text-violet-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                                 >
                                     {item}
@@ -79,7 +79,7 @@ const Navbar = () => {
                             {menuItems.map((item) => (
                                 <a
                                     key={item}
-                                    href={`#${item.toLowerCase()}`}
+                                    href={`#${item === 'Résumé' ? 'resume' : item.toLowerCase()}`}
                                     onClick={handleLinkClick}
                                     className="block text-slate-300 hover:text-violet-400 px-3 py-3 rounded-md text-base font-medium transition-colors"
                                 >

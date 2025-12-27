@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const menuItems = ['Process', 'Projects', 'Articles'];
+    const menuItems = ['Process', 'Resume', 'Projects', 'Articles'];
 
     const handleLinkClick = () => {
         setIsOpen(false);

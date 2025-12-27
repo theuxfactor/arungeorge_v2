@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import SplashIntro from './components/SplashIntro';
 import Navbar from './components/Navbar';
 import DesignProcess from './components/DesignProcess';
+import Resume from './components/Resume';
 import ProjectModal from './components/ProjectModal';
 import articleRagImg from './assets/articles/article-rag.png';
 import codaThumbnail from './assets/coda-thumbnail.png';
@@ -103,6 +104,9 @@ It operates on a "Zero-Friction" model: No login is required. Users simply type 
 
             {/* Design Process Section */}
             <DesignProcess />
+
+            {/* Resume Section */}
+            <Resume />
 
             {/* Projects Section */}
             <section id="projects" className="scroll-mt-32">

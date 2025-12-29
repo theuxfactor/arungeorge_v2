@@ -49,19 +49,19 @@ It operates on a "Zero-Friction" model: No login is required. Users simply type 
         },
         {
           phase: "Orchestrate",
-          description: "The Orchestrator validates the intent and extracts keywords (genre: synthwave, mood: dark/focus)."
+          description: "The Orchestrator validates the intent (Safety Check) and extracts parameters (genre: synthwave, mood: dark/focus)."
         },
         {
           phase: "Analyze",
-          description: "The Analyst converts this to a query, hits the YouTube API, and retrieves a high-quality video ID."
+          description: "The Analyst queries Last.fm to identify top-rated tracks matching those tags, then hits the YouTube API to retrieve the highest-quality video ID for the best match."
         },
         {
           phase: "Enrich",
-          description: "The Storyteller identifies that this artist is known for sci-fi soundtracks and passes that context along."
+          description: "The Storyteller scans Genius data to find the narrative hook (e.g., \"This artist soundtracked the movie Drive\")."
         },
         {
           phase: "Output",
-          description: "Coda replies: \"I've queued up 'Nightcall'. It's a quintessential synthwave track synonymous with the 'Drive' aesthetic.\" -> Music Card appears and plays automatically."
+          description: "Coda replies: \"I've queued up 'Nightcall'. It's a quintessential synthwave track synonymous with the 'Drive' aesthetic.\" → Music Card appears and plays automatically."
         }
       ]
     }

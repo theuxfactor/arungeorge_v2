@@ -4,6 +4,7 @@ import microsoftLogo from '../assets/logos/microsoft.png';
 import nuanceLogo from '../assets/logos/nuance.png';
 import voxgenLogo from '../assets/logos/voxgen.png';
 import cgrnetLogo from '../assets/logos/cgrnet.png';
+import algoyLogo from '../assets/logos/algoy.png';
 
 const Resume = () => {
     const experiences = [
@@ -19,7 +20,10 @@ const Resume = () => {
                 "Implementing generative AI capabilities for dynamic response generation and context aware interactions",
                 "Establishing conversation design standards and best practices for global implementation"
             ],
-            impact: "Leveraged AI-assisted prototyping to transform a static conversation design into a fully functional interactive bot, exceeding stakeholder expectations."
+            impact: [
+                "Hand-selected to lead the UX/UI and conversation design for a high-visibility, next-generation Agentic platform, orchestrating the seamless integration of autonomous AI agents and real-time support tools for customer representatives.",
+                "Leveraged AI-assisted prototyping to transform static designs into fully functional interactive bots, exceeding stakeholder expectations."
+            ]
         },
         {
             company: "Microsoft",
@@ -32,7 +36,9 @@ const Resume = () => {
                 "Developed comprehensive training curriculum covering generative actions, NLU optimization, and intent classification",
                 "Collaborated with product team to improve platform features",
                 "Recruited to work on an internal innovation hub to help with AI Agentic future"
-            ]
+            ],
+            impact: "Received Microsoft Key Employee Award for outstanding performance and significant contributions.",
+            impactLabel: "Award"
         },
         {
             company: "Nuance Communications",
@@ -58,6 +64,17 @@ const Resume = () => {
                 "User Research: Conducted 50+ usability testing sessions using Wizard of Oz research methods (CSAT 4.5, Task Completion 93%)",
                 "Cross-functional Collaboration: Partnered with engineering teams across US and UK offices to ensure on-time delivery",
                 "Multilingual Design: Led script translation and localization efforts for 3 languages"
+            ]
+        },
+        {
+            company: "Algoy",
+            role: "Founder / Lead Engineer",
+            period: "Feb 2010 - Mar 2013",
+            location: "University Project",
+            logo: algoyLogo,
+            description: [
+                "Architected and developed a real-time project networking platform using the CodeIgniter (PHP) framework, enabling users to monitor corporate project pipelines and updates",
+                "Managed the full-stack development lifecycle independently while balancing academic responsibilities at the university"
             ]
         },
         {
@@ -141,11 +158,17 @@ const Resume = () => {
                                     </ul>
 
                                     {exp.impact && (
-                                        <div className="mt-4 pt-4 border-t border-white/5">
-                                            <p className="text-sm italic text-slate-400">
-                                                <span className="text-violet-400 font-semibold not-italic mr-2">Impact:</span>
-                                                {exp.impact}
-                                            </p>
+                                        <div className="mt-4 pt-4 border-t border-white/5 space-y-3">
+                                            <div className="text-sm italic text-slate-400">
+                                                <span className="text-violet-400 font-semibold not-italic mr-2">{exp.impactLabel || "Impact"}:</span>
+                                                {Array.isArray(exp.impact) ? (
+                                                    exp.impact.map((p, i) => (
+                                                        <p key={i} className={i > 0 ? "mt-2" : "inline"}>{p}</p>
+                                                    ))
+                                                ) : (
+                                                    <span>{exp.impact}</span>
+                                                )}
+                                            </div>
                                         </div>
                                     )}
                                 </div>

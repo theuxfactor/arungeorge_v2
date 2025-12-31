@@ -15,10 +15,11 @@ const Resume = () => {
             location: "Remote",
             logo: hclLogo,
             description: [
-                "Architecting enterprise-wide AI assistant using Microsoft Copilot Studio and Nuance Mix Conversation Platform",
-                "Leading cross-functional teams in multiple time zones to deliver conversational AI solutions",
-                "Implementing generative AI capabilities for dynamic response generation and context aware interactions",
-                "Establishing conversation design standards and best practices for global implementation"
+                "NextGen Multi-Agent System: Spearheaded conversation architecture for flagship solution, transitioning from static dialogue flows to dynamic, context-aware orchestration",
+                "System Prompt Engineering: Engineered prompts to manage multi-agent handoffs, ensuring consistent brand persona, guardrails, and seamless interaction logic",
+                "High-Fidelity Prototyping: Developed functional React prototypes using AI-assisted coding (Vibe Coding) to bridge design concepts and engineering implementation",
+                "Agent AI Assist Platform: Directed end-to-end product lifecycle for real-time AI coaching and RAG-based knowledge search capabilities",
+                "Strategic Collaboration: Led cross-functional teams of Speech Scientists and Engineers to translate business requirements into technical execution"
             ],
             impact: [
                 "Hand-selected to lead the UX/UI and conversation design for a high-visibility, next-generation Agentic platform, orchestrating the seamless integration of autonomous AI agents and real-time support tools for customer representatives.",

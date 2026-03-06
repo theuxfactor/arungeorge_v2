@@ -103,7 +103,7 @@ It operates on a "Zero-Friction" model: No login is required. Users simply type 
 
 
             {/* Design Process Section */}
-            <DesignProcess />
+            {/* <DesignProcess /> */}
 
             {/* Resume Section */}
             <Resume />

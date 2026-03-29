@@ -18,7 +18,7 @@ const Resume = () => {
                 "NextGen Multi-Agent System: Spearheaded conversation architecture for flagship solution, transitioning from static dialogue flows to dynamic, context-aware orchestration",
                 "System Prompt Engineering: Engineered prompts to manage multi-agent handoffs, ensuring consistent brand persona, guardrails, and seamless interaction logic",
                 "High-Fidelity Prototyping: Developed functional React prototypes using AI-assisted coding (Vibe Coding) to bridge design concepts and engineering implementation",
-                "Agent AI Assist Platform: Directed end-to-end product lifecycle for real-time AI coaching and RAG-based knowledge search capabilities",
+                "Agent AI Assist Platform: Helped implement real-time AI coaching and next best actions for custom AI assistant panel",
                 "Strategic Collaboration: Led cross-functional teams of Speech Scientists and Engineers to translate business requirements into technical execution"
             ],
             impact: [

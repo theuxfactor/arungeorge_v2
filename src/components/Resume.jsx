@@ -15,7 +15,7 @@ const Resume = () => {
             location: "Remote",
             logo: hclLogo,
             description: [
-                "NextGen Multi-Agent System: Spearheaded conversation architecture for flagship solution, transitioning from static dialogue flows to dynamic, context-aware orchestration",
+                "NextGen Multi-Agent System: Spearheaded conversation design for flagship solution, transitioning from static dialogue flows to deterministic flows",
                 "System Prompt Engineering: Engineered prompts to manage multi-agent handoffs, ensuring consistent brand persona, guardrails, and seamless interaction logic",
                 "High-Fidelity Prototyping: Developed functional React prototypes using AI-assisted coding (Vibe Coding) to bridge design concepts and engineering implementation",
                 "Agent AI Assist Platform: Helped implement real-time AI coaching and next best actions for custom AI assistant panel",

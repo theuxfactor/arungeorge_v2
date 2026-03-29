@@ -34,7 +34,7 @@ const Resume = () => {
             logo: microsoftLogo,
             description: [
                 "Trained 50+ designers across multiple time zones on Copilot Studio implementation, resulting in faster onboarding and project delivery",
-                "Developed comprehensive training curriculum covering generative actions, NLU optimization, and intent classification",
+                "Documented generative actions, NLU optimization, and intent classification for training purposes",
                 "Collaborated with product team to improve platform features",
                 "Recruited to work on an internal innovation hub to help with AI Agentic future"
             ],
@@ -61,7 +61,7 @@ const Resume = () => {
             location: "Remote",
             logo: voxgenLogo,
             description: [
-                "Pharmacy Industry Impact: Helped secured $2M contract with a major US retail pharmacy by becoming the lead designer and the go-to for all design needs",
+                "Pharmacy Industry Impact: Helped secured $2M contract with a major US retail pharmacy by becoming one of the lead designers and the go-to for all design needs",
                 "User Research: Conducted 50+ usability testing sessions using Wizard of Oz research methods (CSAT 4.5, Task Completion 93%)",
                 "Cross-functional Collaboration: Partnered with engineering teams across US and UK offices to ensure on-time delivery",
                 "Multilingual Design: Led script translation and localization efforts for 3 languages"
